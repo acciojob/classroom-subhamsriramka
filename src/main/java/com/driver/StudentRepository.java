@@ -17,15 +17,13 @@ public class StudentRepository {
 
     public void addAStudent(Student student) {
         studentList.add(student);
-        return;
     }
 
     public void addATeacher(Teacher teacher) {
         teacherList.add(teacher);
-        return;
     }
 
-    public void addStudentTeacherPair(String teacher, String student) {
+    public void addStudentTeacherPair(String student, String teacher) {
         Student student1 = getStudentByName(student);
         Teacher teacher1 = getTeacherByName(teacher);
         if(teacher1 == null || student1 == null) return;
